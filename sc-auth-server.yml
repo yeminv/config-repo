@@ -1,1 +1,2 @@
-config: test label 929
+server:
+  port: 12345
