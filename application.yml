@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+        test:
+          git:
+            uri: https://github.com/yeminv/config-repo
+#            searchPaths: {profile}
+        product:
+          searh-locations: classpath:/prod
+  profiles:
+    active: test
+#  label:
+#    active: test
+  security:
+    user:
+      password: test
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
